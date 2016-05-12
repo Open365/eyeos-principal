@@ -1,0 +1,8 @@
+{
+  "entryPoint": "./src/eyeos-principal.js",
+  "output": "./src/eyeos-principal.js",
+  "unifyIncludeDir": "./src",
+  "unifyExcludeDir": ["./src/test"],
+  "preservePaths": [],
+  "strategy":"backend"
+}

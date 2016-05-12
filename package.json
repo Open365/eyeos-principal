@@ -1,0 +1,22 @@
+{
+  "name": "eyeos-principal",
+  "version": "0.0.322",
+  "description": "Library to handle systemGroups with principals",
+  "main": "src/eyeos-principal.js",
+  "dependencies": {
+    "mongoose": "~4.0.1",
+    "log2out": "*"
+  },
+  "devDependencies": {
+    "eyeos-gruntfile": "*",
+    "chai": "~2.2.0",
+    "sinon": "~1.14.1",
+    "wait.for": "~0.6.6",
+    "grunt": "~0.4.5",
+    "grunt-shell": "~1.1.2",
+    "mocha": "~2.2.4",
+    "grunt-mocha-test": "~0.12.7",
+    "eyeos-hooks": "*"
+  },
+  "license": "AGPL-3.0"
+}
