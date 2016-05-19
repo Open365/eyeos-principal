@@ -48,6 +48,22 @@ PrincipalProvider.prototype.getPrincipalById = function (id, callback) {
 	});
 };
 
+PrincipalProvider.prototype.getPrincipalByIdAndDomain = function (id, domain, callback) {
+	assertNotNull(this.Principal, "Principal must not be null (on constructor)");
+
+	return this.Principal.findOne({ principalId: id , domain: domain}, function (err, object) {
+		if (err) {
+			console.error("PrincipalProvider.getPrincipalByIdAndDomain", err);
+			return callback(err, null);
+		}
+		if (object) {
+			object.populate('systemGroups', callback);
+		} else {
+			return callback(null, null);
+		}
+	});
+};
+
 // Move callback to last arguments position
 PrincipalProvider.prototype.createPrincipal = function(user, callback, administratorUsername, mustChangePassword, principalSystemGroupAssignationProvider) {
     assertNotNull(this.systemGroupProvider, "SystemGroup or systemGroupProvider must not be null (on constructor)");
