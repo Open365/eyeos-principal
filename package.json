@@ -1,6 +1,6 @@
 {
   "name": "eyeos-principal",
-  "version": "0.0.323",
+  "version": "0.0.324",
   "description": "Library to handle systemGroups with principals",
   "main": "src/eyeos-principal.js",
   "dependencies": {
